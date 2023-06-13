@@ -1,0 +1,27 @@
+#!/bin/bash
+
+######
+#
+# Modified at 2023-06-12 16:24:00 KST ~ 2023-06-12 17:55:55 KST
+# by Cellularhacker (wva3cdae@gmail.com)
+# Github @Cellularhacker
+#
+# Check Updates at : https://github.com/Cellularhacker/linux-tools/blob/main/openpbs/pbsnodes_status
+#
+######
+
+TIMESTAMP=$(date +20%y%m%d-%H%M%S)
+F_NAME="pbsnodes_states_${TIMESTAMP}.txt"
+F_PATH="/tmp/${F_NAME}"
+
+pbsnodes -a > "${F_PATH}"
+
+# MARK: DEBUG
+#ls -al "${F_PATH}"
+
+execute-pbsnodes_status.pl < "${F_PATH}"
+
+# MARK: Remove the file after used
+rm -f "${F_PATH}"
+
+#     a_5_space
