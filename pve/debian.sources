@@ -1,0 +1,11 @@
+Types: deb deb-src
+URIs: ##PROTOCOL##://##ENDPOINT_DEBIAN##/##PATH_DEBIAN##
+Suites: bookworm bookworm-updates
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb deb-src
+URIs: https://##ENDPOINT_DEBIAN_SECURITY##/##PATH_DEBIAN_SECURITY##
+Suites: bookworm-security
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
