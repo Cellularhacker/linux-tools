@@ -1,0 +1,5 @@
+Types: deb
+URIs: http://download.proxmox.com/debian/pbs
+Suites: bookworm
+Components: pbs-no-subscription
+Signed-By: /usr/share/keyrings/proxmox-release-bookworm.gpg
